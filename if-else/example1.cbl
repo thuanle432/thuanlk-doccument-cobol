@@ -1,0 +1,14 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. example1.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-NUM1         PIC     9(03).
+       PROCEDURE DIVISION.
+           DISPLAY "INPUT AGE: " ACCEPT WS-NUM1.
+           IF WS-NUM1 IS GREATER THAN OR EQUAL TO 18
+               DISPLAY "HAVE QUALIFIELD"
+           ELSE
+               DISPLAY "NOT HAVE QUALIFIELD"
+           END-IF.
+           STOP RUN.

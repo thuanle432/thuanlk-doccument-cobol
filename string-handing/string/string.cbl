@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. string1.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-FIRST        PIC X(10).
+       01  WS-SECOND       PIC X(15).
+       01  WS-NAME1        PIC X(25).
+       PROCEDURE DIVISION.
+           DISPLAY "DELIMITED BY SIZE: ".
+           MOVE "LE" TO WS-FIRST.
+           MOVE "THUAN" TO WS-SECOND.
+           STRING WS-FIRST DELIMITED BY SPACE
+           " / " DELIMITED BY SPACE
+           WS-SECOND DELIMITED BY SPACE INTO WS-NAME1.
+           DISPLAY "WS-NAME1: " WS-NAME1.
+           STOP RUN.
+       

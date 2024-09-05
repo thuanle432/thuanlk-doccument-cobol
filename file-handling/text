@@ -1,0 +1,3 @@
+1.Sequential: Các bản ghi được lưu trữ và truy cập theo thứ tự tuần tự
+2.Indexed: Các bản ghi được lưu trữ với 1 khoá chính và có thể truy cập trực tiếp thông qua khoá này
+3.Relative: Các bản ghi được lưu trữ tại các vị trí tương đối cụ thể và có thể truy cập được
