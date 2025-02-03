@@ -1,0 +1,60 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.   P0002.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT U01 ASSIGN TO 'U01'.
+       DATA DIVISION.
+       FILE SECTION.
+       FD U01.
+       01  INPUT-RECORD.
+         03  INPUT-KEY  PIC X(4).
+         03  SHIMEI-KANA PIC X(20).
+         03  SHIMEI-KANJI  PIC N(20).
+         03  FILLER        PIC X(15).
+       WORKING-STORAGE SECTION.
+       PROCEDURE DIVISION.
+           OPEN OUTPUT U01.
+           MOVE '1111' TO INPUT-KEY.
+           MOVE 'A1111' TO SHIMEI-KANA.
+           MOVE 'A1111' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+           
+           MOVE '2222' TO INPUT-KEY.
+           MOVE 'A2221' TO SHIMEI-KANA.
+           MOVE 'A2221' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+           MOVE '2222' TO INPUT-KEY.
+           MOVE 'A2222' TO SHIMEI-KANA.
+           MOVE 'A2222' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+           MOVE '3333' TO INPUT-KEY.
+           MOVE 'A3331' TO SHIMEI-KANA.
+           MOVE 'A3331' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+
+           MOVE '4444' TO INPUT-KEY.
+           MOVE 'A4441' TO SHIMEI-KANA.
+           MOVE 'A4441' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+           MOVE '4444' TO INPUT-KEY.
+           MOVE 'A4442' TO SHIMEI-KANA.
+           MOVE 'A4442' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+           MOVE '4444' TO INPUT-KEY.
+           MOVE 'A4443' TO SHIMEI-KANA.
+           MOVE 'A4443' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+
+           MOVE '5555' TO INPUT-KEY.
+           MOVE 'A5551' TO SHIMEI-KANA.
+           MOVE 'A5551' TO SHIMEI-KANJI.
+           WRITE INPUT-RECORD.
+           
+           CLOSE U01.
+           STOP RUN.
